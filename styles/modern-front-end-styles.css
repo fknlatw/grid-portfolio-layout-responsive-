@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+}
+:root{
+    --footer: #0D1321;
+    --content: #F0EBD8;
+    --header: #3E5C76;
+    --textfh: #F0EBD8;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--textfh)
+}
+
+body{
+   max-width: 1440px;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: 1fr 2fr 1fr;
+   grid-template-rows: auto minmax(700px, 2fr) 100px;
+}
+
+.header{
+    grid-column: span 3;
+    background: var(--header);
+}
+
+.column{
+    background:var(--content);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin: 10px;
+    color: var(--footer);
+}
+.left ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin: 10px;
+    color: var(--footer);
+}
+
+
+.center{
+    flex-direction: column;
+    color: var(--footer);
+    background-image: url("../images/art.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.center h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.header ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 18px
+}
+.footer{
+    grid-column: span 3;
+    background: var(--footer);
+    color: var(--textfh);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer h1{
+    grid-column: span 3;
+    justify-self: center;
+}
+
+.footer a{
+    justify-self: center;
+}
+
+.footer a:hover{
+    color: var(--header);
+    transition: color 0.3s; 
+}
+
+.header ul li a:hover{
+    color: var(--footer);
+    transition: color 0.3s; 
+}
+
+@media screen  and (max-width: 950px){
+    .left{
+        grid-column: span 3;
+    }
+    .center{
+        grid-column: span 3;
+    }
+    .right{
+        grid-column: span 3;
+    }
+    body{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 400px 400px 400px 200px;
+    }
+
+    .footer a{
+        grid-column: span 3;
+    }
+}
+
+
+
+@media screen  and (max-width: 700px){
+    .left{
+        grid-column: span 3;
+    }
+    .center{
+        grid-column: span 3;
+    }
+    .right{
+        grid-column: span 3;
+    }
+    body{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 300px 300px 300px 200px;
+    }
+
+    .footer a{
+        grid-column: span 3;
+    }
+}
+
